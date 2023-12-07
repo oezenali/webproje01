@@ -1,0 +1,70 @@
+/* _content/webproje1/Views/Shared/_Layout.cshtml.rz.scp.css */
+:root[b-pl0ntyh4ju] {
+    --primary-color: #ff7f50; 
+    --secondary-color: #add8e6; 
+}
+
+body[b-pl0ntyh4ju] {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--secondary-color);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar[b-pl0ntyh4ju] {
+    background-color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.navbar-brand[b-pl0ntyh4ju] {
+    color: white;
+}
+
+.nav-link[b-pl0ntyh4ju] {
+    color: white;
+}
+
+header[b-pl0ntyh4ju] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main[b-pl0ntyh4ju] {
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer[b-pl0ntyh4ju] {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a[b-pl0ntyh4ju] {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover[b-pl0ntyh4ju] {
+    text-decoration: underline;
+}
+
+.btn-primary[b-pl0ntyh4ju] {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover[b-pl0ntyh4ju] {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}

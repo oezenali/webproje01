@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = webproje1
+build_property.RootNamespace = webproje1
+build_property.ProjectDir = C:\Users\oezen\source\repos\webproje1\webproje1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\oezen\source\repos\webproje1\webproje1
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Baharat/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFoYXJhdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Baharat/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFoYXJhdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Baharat/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFoYXJhdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Baharat/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFoYXJhdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Baharat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFoYXJhdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Ekmek/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWttZWtcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Ekmek/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWttZWtcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Ekmek/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWttZWtcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Ekmek/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWttZWtcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Ekmek/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWttZWtcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Recel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWxcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Recel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Recel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Recel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Recel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWFnXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yag/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWFnXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yag/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWFnXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yag/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWFnXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yelek/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWVsZWtcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yelek/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWVsZWtcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yelek/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWVsZWtcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yelek/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWVsZWtcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Yelek/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWWVsZWtcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oezen/source/repos/webproje1/webproje1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-pl0ntyh4ju
