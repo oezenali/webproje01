@@ -2,13 +2,17 @@
 
 @{
     ViewData["Title"] = "Index";
+    bool isAdmin = ViewBag.IsAdmin != null && (bool)ViewBag.IsAdmin;
 }
 
-<h1>Index</h1>
+<h1>Yelekler</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@if (isAdmin)
+{
+    <p>
+        <a asp-action="Create">Yeni Yelek Ekle</a>
+    </p>
+}
 <table class="table">
     <thead>
         <tr>
@@ -21,9 +25,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Fiyat)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ResimUrl)
-            </th>
+            <th>Resim</th>
             <th>
                 @Html.DisplayNameFor(model => model.Yore)
             </th>
@@ -37,35 +39,41 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Aciklama)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fiyat)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ResimUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Yore)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UretimTarihi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StoktaMi)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aciklama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fiyat)
+                </td>
+                <td>
+                    <img src="@item.ResimUrl" alt="@item.Ad" style="width:100px; height:auto;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Yore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UretimTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StoktaMi)
+                </td>
+                <td>
+                    @if (isAdmin)
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id">Duzenle</a>
+                        @Html.Raw(" | ")
+                        <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a>
+                        @Html.Raw(" | ")
+                        <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

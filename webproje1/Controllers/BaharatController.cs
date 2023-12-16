@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using webproje1.Models;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
+using webproje1.Models;
 
 namespace webproje1.Controllers
 {
@@ -14,14 +16,14 @@ namespace webproje1.Controllers
             _context = context;
         }
 
-        // GET: Baharat
         public async Task<IActionResult> Index()
         {
-            var baharatlar = await _context.Baharatlar.ToListAsync();
-            return View(baharatlar);
+            var isAdmin = User.IsInRole("Admin");
+            ViewBag.IsAdmin = isAdmin;
+            return View(await _context.Baharatlar.ToListAsync());
         }
 
-        // GET: Baharat/Details/5
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -39,15 +41,15 @@ namespace webproje1.Controllers
             return View(baharat);
         }
 
-        // GET: Baharat/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Baharat/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Baharat baharat)
         {
             if (ModelState.IsValid)
@@ -59,7 +61,7 @@ namespace webproje1.Controllers
             return View(baharat);
         }
 
-        // GET: Baharat/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -75,9 +77,9 @@ namespace webproje1.Controllers
             return View(baharat);
         }
 
-        // POST: Baharat/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Baharat baharat)
         {
             if (id != baharat.Id)
@@ -108,7 +110,7 @@ namespace webproje1.Controllers
             return View(baharat);
         }
 
-        // GET: Baharat/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -126,9 +128,9 @@ namespace webproje1.Controllers
             return View(baharat);
         }
 
-        // POST: Baharat/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var baharat = await _context.Baharatlar.FindAsync(id);

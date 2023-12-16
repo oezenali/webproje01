@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using webproje1.Models;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using webproje1.Models;
 
 namespace webproje1.Controllers
 {
@@ -18,8 +18,9 @@ namespace webproje1.Controllers
         // GET: Recel
         public async Task<IActionResult> Index()
         {
-            var receller = await _context.Receller.ToListAsync();
-            return View(receller);
+            var isAdmin = User.IsInRole("Admin");
+            ViewBag.IsAdmin = isAdmin;
+            return View(await _context.Receller.ToListAsync());
         }
 
         // GET: Recel/Details/5
@@ -30,8 +31,7 @@ namespace webproje1.Controllers
                 return NotFound();
             }
 
-            var recel = await _context.Receller
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var recel = await _context.Receller.FirstOrDefaultAsync(m => m.Id == id);
             if (recel == null)
             {
                 return NotFound();
@@ -41,6 +41,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Recel/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -49,6 +50,7 @@ namespace webproje1.Controllers
         // POST: Recel/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Recel recel)
         {
             if (ModelState.IsValid)
@@ -61,6 +63,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Recel/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -79,6 +82,7 @@ namespace webproje1.Controllers
         // POST: Recel/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Recel recel)
         {
             if (id != recel.Id)
@@ -110,6 +114,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Recel/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -117,8 +122,7 @@ namespace webproje1.Controllers
                 return NotFound();
             }
 
-            var recel = await _context.Receller
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var recel = await _context.Receller.FirstOrDefaultAsync(m => m.Id == id);
             if (recel == null)
             {
                 return NotFound();
@@ -130,6 +134,7 @@ namespace webproje1.Controllers
         // POST: Recel/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var recel = await _context.Receller.FindAsync(id);

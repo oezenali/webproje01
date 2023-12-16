@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using webproje1.Models;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
+using webproje1.Models;
 
 namespace webproje1.Controllers
 {
@@ -17,6 +18,8 @@ namespace webproje1.Controllers
         // GET: Yelek
         public async Task<IActionResult> Index()
         {
+            var isAdmin = User.IsInRole("Admin");
+            ViewBag.IsAdmin = isAdmin;
             return View(await _context.Yelekler.ToListAsync());
         }
 
@@ -28,8 +31,7 @@ namespace webproje1.Controllers
                 return NotFound();
             }
 
-            var yelek = await _context.Yelekler
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var yelek = await _context.Yelekler.FirstOrDefaultAsync(m => m.Id == id);
             if (yelek == null)
             {
                 return NotFound();
@@ -39,6 +41,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Yelek/Create
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -47,6 +50,7 @@ namespace webproje1.Controllers
         // POST: Yelek/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create([Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Yelek yelek)
         {
             if (ModelState.IsValid)
@@ -59,6 +63,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Yelek/Edit/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,6 +82,7 @@ namespace webproje1.Controllers
         // POST: Yelek/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Yelek yelek)
         {
             if (id != yelek.Id)
@@ -108,6 +114,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Yelek/Delete/5
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -115,8 +122,7 @@ namespace webproje1.Controllers
                 return NotFound();
             }
 
-            var yelek = await _context.Yelekler
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var yelek = await _context.Yelekler.FirstOrDefaultAsync(m => m.Id == id);
             if (yelek == null)
             {
                 return NotFound();
@@ -128,6 +134,7 @@ namespace webproje1.Controllers
         // POST: Yelek/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var yelek = await _context.Yelekler.FindAsync(id);

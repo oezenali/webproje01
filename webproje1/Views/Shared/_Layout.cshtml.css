@@ -1,32 +1,35 @@
 ﻿:root {
-    --primary-color: #ff7f50; 
-    --secondary-color: #add8e6; 
+    --primary-color: #5f4b8b;  /* Mor renk tonu */
+    --secondary-color: #e0e0e0; /* Açık gri tonu */
+    --text-color: #333; /* Koyu metin rengi */
+    --link-color: #ff7f50; /* Canlı turuncu tonu, linkler için */
+    --link-hover-color: #cc6a4d; /* Link üzerine gelindiğinde turuncunun koyu tonu */
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--secondary-color);
-    color: #333;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 .navbar {
     background-color: var(--primary-color);
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--link-color);
 }
 
-.navbar-brand {
+.navbar-brand, .nav-link, footer {
     color: white;
 }
 
-.nav-link {
-    color: white;
+.nav-link:hover, .navbar-brand:hover {
+    color: var(--link-hover-color);
 }
 
 header {
     background-color: var(--primary-color);
-    color: white;
     padding: 10px 0;
     text-align: center;
 }
@@ -35,35 +38,52 @@ main {
     padding: 20px;
     background-color: white;
     border-radius: 5px;
-    margin-top: 20px;
+    margin: 20px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 960px; /* Genişlik sınırlaması */
 }
 
 footer {
     background-color: var(--primary-color);
-    color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    position: relative; /* Fixed yerine relative daha uygun olabilir */
     width: 100%;
+    clear: both; /* Footer'ın her zaman en altta kalmasını sağlar */
 }
 
 a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease; /* Renk geçiş animasyonu */
 }
 
 a:hover {
-    text-decoration: underline;
+    color: var(--link-hover-color);
+    text-decoration: none; /* Linklerin altını kaldırır */
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--link-color);
+    border-color: var(--link-color);
 }
 
 .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
-    border-color: darken(var(--primary-color), 10%);
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
+}
+
+/* Responsive tasarım için ekstra stiller */
+@media (max-width: 768px) {
+    .navbar {
+        border-bottom: none;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    main {
+        margin: 20px;
+        padding: 15px;
+    }
 }

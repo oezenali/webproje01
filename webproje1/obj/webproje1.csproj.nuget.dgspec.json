@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oezen\\source\\repos\\webproje1\\webproje1\\webproje1.csproj": {}
+    "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\webproje1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oezen\\source\\repos\\webproje1\\webproje1\\webproje1.csproj": {
+    "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\webproje1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oezen\\source\\repos\\webproje1\\webproje1\\webproje1.csproj",
+        "projectUniqueName": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\webproje1.csproj",
         "projectName": "webproje1",
-        "projectPath": "C:\\Users\\oezen\\source\\repos\\webproje1\\webproje1\\webproje1.csproj",
+        "projectPath": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\webproje1.csproj",
         "packagesPath": "C:\\Users\\oezen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oezen\\source\\repos\\webproje1\\webproje1\\obj\\",
+        "outputPath": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oezen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,22 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "CoreAdmin": {
+              "target": "Package",
+              "version": "[2.7.1, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.14, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

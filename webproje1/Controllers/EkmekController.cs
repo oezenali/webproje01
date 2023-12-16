@@ -3,6 +3,7 @@ using webproje1.Models;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization; 
 
 namespace webproje1.Controllers
 {
@@ -18,8 +19,9 @@ namespace webproje1.Controllers
         // GET: Ekmek
         public async Task<IActionResult> Index()
         {
-            var ekmekler = await _context.Ekmekler.ToListAsync();
-            return View(ekmekler);
+            var isAdmin = User.IsInRole("Admin");
+            ViewBag.IsAdmin = isAdmin;
+            return View(await _context.Ekmekler.ToListAsync());
         }
 
         // GET: Ekmek/Details/5
@@ -30,8 +32,7 @@ namespace webproje1.Controllers
                 return NotFound();
             }
 
-            var ekmek = await _context.Ekmekler
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var ekmek = await _context.Ekmekler.FirstOrDefaultAsync(m => m.Id == id);
             if (ekmek == null)
             {
                 return NotFound();
@@ -41,6 +42,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Ekmek/Create
+        [Authorize(Roles = "Admin")] // Admin yetkisi
         public IActionResult Create()
         {
             return View();
@@ -49,6 +51,7 @@ namespace webproje1.Controllers
         // POST: Ekmek/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")] // Admin yetkisi
         public async Task<IActionResult> Create([Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Ekmek ekmek)
         {
             if (ModelState.IsValid)
@@ -61,6 +64,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Ekmek/Edit/5
+        [Authorize(Roles = "Admin")] // Admin yetkisi
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -79,6 +83,7 @@ namespace webproje1.Controllers
         // POST: Ekmek/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")] // Admin yetkisi
         public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,Aciklama,Fiyat,ResimUrl,Yore,UretimTarihi,StoktaMi")] Ekmek ekmek)
         {
             if (id != ekmek.Id)
@@ -110,6 +115,7 @@ namespace webproje1.Controllers
         }
 
         // GET: Ekmek/Delete/5
+        [Authorize(Roles = "Admin")] // Admin yetkisi
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -117,8 +123,7 @@ namespace webproje1.Controllers
                 return NotFound();
             }
 
-            var ekmek = await _context.Ekmekler
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var ekmek = await _context.Ekmekler.FirstOrDefaultAsync(m => m.Id == id);
             if (ekmek == null)
             {
                 return NotFound();
@@ -130,6 +135,7 @@ namespace webproje1.Controllers
         // POST: Ekmek/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")] // Admin yetkisi
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var ekmek = await _context.Ekmekler.FindAsync(id);

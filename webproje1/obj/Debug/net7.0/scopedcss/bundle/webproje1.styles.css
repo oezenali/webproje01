@@ -1,33 +1,36 @@
 /* _content/webproje1/Views/Shared/_Layout.cshtml.rz.scp.css */
 :root[b-pl0ntyh4ju] {
-    --primary-color: #ff7f50; 
-    --secondary-color: #add8e6; 
+    --primary-color: #5f4b8b;  /* Mor renk tonu */
+    --secondary-color: #e0e0e0; /* Açık gri tonu */
+    --text-color: #333; /* Koyu metin rengi */
+    --link-color: #ff7f50; /* Canlı turuncu tonu, linkler için */
+    --link-hover-color: #cc6a4d; /* Link üzerine gelindiğinde turuncunun koyu tonu */
 }
 
 body[b-pl0ntyh4ju] {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--secondary-color);
-    color: #333;
+    color: var(--text-color);
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 .navbar[b-pl0ntyh4ju] {
     background-color: var(--primary-color);
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--link-color);
 }
 
-.navbar-brand[b-pl0ntyh4ju] {
+.navbar-brand[b-pl0ntyh4ju], .nav-link[b-pl0ntyh4ju], footer[b-pl0ntyh4ju] {
     color: white;
 }
 
-.nav-link[b-pl0ntyh4ju] {
-    color: white;
+.nav-link:hover[b-pl0ntyh4ju], .navbar-brand:hover[b-pl0ntyh4ju] {
+    color: var(--link-hover-color);
 }
 
 header[b-pl0ntyh4ju] {
     background-color: var(--primary-color);
-    color: white;
     padding: 10px 0;
     text-align: center;
 }
@@ -36,35 +39,52 @@ main[b-pl0ntyh4ju] {
     padding: 20px;
     background-color: white;
     border-radius: 5px;
-    margin-top: 20px;
+    margin: 20px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 960px; /* Genişlik sınırlaması */
 }
 
 footer[b-pl0ntyh4ju] {
     background-color: var(--primary-color);
-    color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    position: relative; /* Fixed yerine relative daha uygun olabilir */
     width: 100%;
+    clear: both; /* Footer'ın her zaman en altta kalmasını sağlar */
 }
 
 a[b-pl0ntyh4ju] {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease; /* Renk geçiş animasyonu */
 }
 
 a:hover[b-pl0ntyh4ju] {
-    text-decoration: underline;
+    color: var(--link-hover-color);
+    text-decoration: none; /* Linklerin altını kaldırır */
 }
 
 .btn-primary[b-pl0ntyh4ju] {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--link-color);
+    border-color: var(--link-color);
 }
 
 .btn-primary:hover[b-pl0ntyh4ju] {
-    background-color: darken(var(--primary-color), 10%);
-    border-color: darken(var(--primary-color), 10%);
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
+}
+
+/* Responsive tasarım için ekstra stiller */
+@media (max-width: 768px) {
+    .navbar[b-pl0ntyh4ju] {
+        border-bottom: none;
+    }
+
+    header[b-pl0ntyh4ju] {
+        padding: 20px 0;
+    }
+
+    main[b-pl0ntyh4ju] {
+        margin: 20px;
+        padding: 15px;
+    }
 }
