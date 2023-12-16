@@ -1,0 +1,35 @@
+﻿@model webproje1.Models.Feedback
+
+<h2>Feedback Gönder</h2>
+
+<!-- Feedback formunun hangi controller ve action'a gitmesi gerektiğini belirtiyoruz -->
+<form asp-controller="Feedback" asp-action="Create" method="post">
+    <!-- Model hatalarını göstermek için asp-validation-summary kullanıyoruz -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- Kullanıcı adı alanı -->
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <!-- Email alanı -->
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <!-- Mesaj alanı -->
+    <div class="form-group">
+        <label asp-for="Message" class="control-label"></label>
+        <textarea asp-for="Message" class="form-control"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+
+    <!-- Gönder butonu -->
+    <div class="form-group">
+        <input type="submit" value="Gönder" class="btn btn-primary" />
+    </div>
+</form>
