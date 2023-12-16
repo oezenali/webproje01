@@ -74,8 +74,9 @@ a:hover[b-pl0ntyh4ju] {
 
 /* Responsive tasarım için ekstra stiller */
 @media (max-width: 768px) {
+    /* Navbar için mavi arka plan rengi */
     .navbar[b-pl0ntyh4ju] {
-        border-bottom: none;
+        background-color: #007bff;
     }
 
     header[b-pl0ntyh4ju] {

@@ -26,9 +26,8 @@ namespace webproje1.Models
         [Display(Name = "E-posta Adresi")]
         public string Email { get; set; }
 
-        [DataType(DataType.Currency)]
-        [Display(Name = "Maaş")]
-        public decimal Salary { get; set; }
+        [Display(Name = "Toplam Siparis")]
+        public decimal Order { get; set; }
 
         [DataType(DataType.Date)]
         [Display(Name = "İşe Başlama Tarihi")]
