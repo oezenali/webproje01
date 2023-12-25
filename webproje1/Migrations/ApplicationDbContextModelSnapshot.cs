@@ -246,6 +246,9 @@ namespace webproje1.Migrations
                     b.Property<bool>("StoktaMi")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Uretici")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UretimTarihi")
                         .HasColumnType("datetime2");
 
@@ -326,6 +329,9 @@ namespace webproje1.Migrations
                     b.Property<bool>("StoktaMi")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Uretici")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UretimTarihi")
                         .HasColumnType("datetime2");
 
@@ -389,6 +395,9 @@ namespace webproje1.Migrations
                     b.Property<bool>("StoktaMi")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Uretici")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UretimTarihi")
                         .HasColumnType("datetime2");
 
@@ -427,6 +436,9 @@ namespace webproje1.Migrations
                     b.Property<bool>("StoktaMi")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Uretici")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UretimTarihi")
                         .HasColumnType("datetime2");
 
@@ -464,6 +476,9 @@ namespace webproje1.Migrations
 
                     b.Property<bool>("StoktaMi")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Uretici")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("UretimTarihi")
                         .HasColumnType("datetime2");

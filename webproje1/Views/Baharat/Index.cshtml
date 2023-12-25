@@ -5,13 +5,15 @@
     bool isAdmin = ViewBag.IsAdmin != null && (bool)ViewBag.IsAdmin;
 }
 
-<h1>Baharatlar</h1>
+<h1 class="display-4">Baharatlar</h1>
 
 @if (isAdmin)
 {
     <p>
-        <a asp-action="Create">Yeni Baharat Ekle</a>
+        <a asp-action="Create" class="btn btn-success">Yeni Baharat Ekle</a>
     </p>
+
+
 }
 
 <table class="table">
@@ -40,14 +42,14 @@
                 <td>@item.UretimTarihi.ToString("dd/MM/yyyy")</td>
                 <td>@Html.DisplayFor(modelItem => item.StoktaMi)</td>
                 <td>
-                    @if (isAdmin)
-                    {
-                        <a asp-action="Edit" asp-route-id="@item.Id">Duzenle</a>
-                        @Html.Raw(" | ")
-                        <a asp-action="Details" asp-route-id="@item.Id">Detaylar</a>
-                        @Html.Raw(" | ")
-                        <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
-                    }
+                <td>
+                        @if (isAdmin)
+                        {
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Düzenle</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detaylar</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Sil</a>
+                        }
+                </td>
                 </td>
             </tr>
         }

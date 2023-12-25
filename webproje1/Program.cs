@@ -16,7 +16,7 @@ builder.Services.AddCoreAdmin("Admin");
 
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddCoreAdmin();
+builder.Services.AddCoreAdmin();
 
 var app = builder.Build();
 

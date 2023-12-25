@@ -189,6 +189,66 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\Baguette.jpg",
+      "PackagePath": "staticwebassets\\images\\Baguette.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\Ciabatta.jpg",
+      "PackagePath": "staticwebassets\\images\\Ciabatta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\calisanlar.jpeg",
+      "PackagePath": "staticwebassets\\images\\calisanlar.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\cavdarekmegi.jpg",
+      "PackagePath": "staticwebassets\\images\\cavdarekmegi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\citir.jpg",
+      "PackagePath": "staticwebassets\\images\\citir.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\kekik.jpg",
+      "PackagePath": "staticwebassets\\images\\kekik.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\kepekli.jpg",
+      "PackagePath": "staticwebassets\\images\\kepekli.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\lavas.jpg",
+      "PackagePath": "staticwebassets\\images\\lavas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\pide.jpg",
+      "PackagePath": "staticwebassets\\images\\pide.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\sembol.png",
+      "PackagePath": "staticwebassets\\images\\sembol.png"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\simit.jpg",
+      "PackagePath": "staticwebassets\\images\\simit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\tambugday.jpeg",
+      "PackagePath": "staticwebassets\\images\\tambugday.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\tambugday.jpg",
+      "PackagePath": "staticwebassets\\images\\tambugday.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\village.jpg",
+      "PackagePath": "staticwebassets\\images\\village.jpg"
+    },
+    {
+      "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\images\\zeytinyagi.jpeg",
+      "PackagePath": "staticwebassets\\images\\zeytinyagi.jpeg"
+    },
+    {
       "Id": "C:\\Users\\oezen\\source\\repos\\webproje01\\webproje1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
